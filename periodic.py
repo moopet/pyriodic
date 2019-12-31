@@ -42,8 +42,17 @@ class PeriodicTable:
             text = f" {number:3}"
 
         if self.color:
-            background_color = bg(self.elements[symbol]["color"])
-            text_color = fg("white") if show_number else fg("black")
+            element_color = self.elements[symbol]["color"]
+            contrast_color = "white"
+
+            if element_color == "green":
+                contrast_color = "grey_85"
+
+            if element_color == "yellow":
+                contrast_color = "yellow_1"
+
+            background_color = bg(element_color)
+            text_color = fg(contrast_color) if show_number else fg("black")
             reset = attr("reset")
 
             text = f"{background_color}{text_color}{text}{reset}"
@@ -64,6 +73,10 @@ class PeriodicTable:
 
         print(f"Symbol: {symbol}")
         print(f"Name: {element['name']}")
+
+        if "origin" in element:
+            print(f"Origin of name: {element['origin']}")
+
         print(f"Series: {element['series'].capitalize()}")
         print(f"Atomic number: {element['number']}")
         print(f"Period: {element['period']}")
