@@ -112,8 +112,8 @@ class PeriodicTable:
         lines = [symbols[i:i + columns] for i in range(0, len(symbols), columns)]
 
         for line in lines:
-            top = [self.get_colorized_symbol(symbol) for symbol in line]
-            bottom = [self.get_colorized_symbol(symbol, show_number=True) for symbol in line]
+            top = [self.get_colorized_symbol(symbol, show_number=True) for symbol in line]
+            bottom = [self.get_colorized_symbol(symbol) for symbol in line]
 
             print("".join(top))
             print("".join(bottom))
@@ -126,36 +126,25 @@ class PeriodicTable:
             self.stack = []
             self.results = []
             word = word.lower()
-        else:
-            print("Recursing", self.stack, word)
 
         for symbol in self.elements:
             symbol = symbol.lower()
 
-            if symbol != word[:len(symbol)]:
-                continue
-
-            self.stack.append(symbol)
-
             if symbol == word:
                 if self.stack not in self.results:
+                    self.stack.append(symbol)
                     self.results.append(self.stack)
+                    self.stack = self.stack[:-1]
 
-                    print ("storing result", self.stack)
                 continue
 
-            self.get_solutions(word[len(symbol):], recursing=True)
+            if symbol == word[:len(symbol)]:
+                self.stack.append(symbol)
+                self.get_solutions(word[len(symbol):], recursing=True)
 
         self.stack = self.stack[:-1]
 
-        print ("up", self.stack)
         return sorted(self.results, key=self.get_solution_ranking)
-
-
-    def is_perfect_solution(self, solution):
-        """Test whether a solution contains no repeated symbols."""
-
-        return len(solution) == len(set(solution))
 
 
     def get_solution_ranking(self, solution):
@@ -177,7 +166,6 @@ class PeriodicTable:
 
         for solution in solutions:
             self.render_symbols(solution)
-            print (self.get_solution_ranking(solution))
 
 
     def render_phrase(self, text):
