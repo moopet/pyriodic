@@ -67,7 +67,9 @@ class PeriodicTable:
         print(f"Series: {element['series'].capitalize()}")
         print(f"Atomic number: {element['number']}")
         print(f"Period: {element['period']}")
-        print(f"Group: {element['group']}")
+
+        if "group" in element:
+            print(f"Group: {element['group']}")
 
 
     def render_table(self):
