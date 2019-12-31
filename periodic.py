@@ -55,7 +55,7 @@ class PeriodicTable:
         """Print summary information for a particular element."""
 
         if symbol not in self.elements:
-            raise PeridicTableError(f"Symbol not found in the periodic table")
+            raise PeriodicTableError(f"Symbol not found in the periodic table")
 
         if self.color:
             self.render_symbols([symbol])
@@ -159,7 +159,7 @@ class PeriodicTable:
         solutions = self.get_solutions(word)
 
         if not solutions:
-            return False
+            raise PeriodicTableError("No solution found for word")
 
         if not self.show_variations:
             solutions = solutions[:1]
@@ -177,7 +177,7 @@ class PeriodicTable:
             solutions = self.get_solutions(word)
 
             if not solutions:
-                return False
+                raise PeriodicTableError("No solution found for word")
 
             if len(symbols):
                 symbols.append(" ")
@@ -185,6 +185,15 @@ class PeriodicTable:
             symbols += solutions[0]
 
         self.render_symbols(symbols)
+
+
+    def get_symbol_from_atomic_number(self, number):
+        """Translate an atomic number into an element's symbol."""
+
+        number = int(number)
+        matches = [e for e in self.elements if self.elements[e]["number"] == number]
+
+        return matches[0] if matches else None
 
 
 def main():
@@ -195,18 +204,21 @@ def main():
 
     parser = argparse.ArgumentParser(description=main.__doc__)
 
-    parser.add_argument("--word", type=str, help="a word to render")
-    parser.add_argument("--phrase", type=str, help="a phrase to render")
+    group = parser.add_mutually_exclusive_group()
+    parser.add_argument("-i", "--info", type=str,
+            help="show more info about a particular element", metavar=("ELEMENT"))
+    parser.add_argument("-w", "--word", type=str, help="a word to render")
+    group.add_argument("-v", "--variations", action="store_true",
+            help="display all variations, rather than just the best match.")
+    group.add_argument("-p", "--phrase", type=str, help="a phrase to render")
+    parser.add_argument("-g", "--grid", action="store_true", help="show the grid")
+    parser.add_argument("-t", "--table", action="store_true",
+            help="display the traditional layout for the periodic table")
+    parser.add_argument("-c", "--color", action="store_true",
+            help="display each element using its color")
     parser.add_argument("--width", type=int, default=80,
             help="number of character columns to display on one line")
-    parser.add_argument("--color", action="store_true",
-            help="display each element using its color")
-    parser.add_argument("--info", type=str, help="show more info about a particular element")
-    parser.add_argument("--grid", action="store_true", help="show the grid")
-    parser.add_argument("--table", action="store_true",
-            help="display the traditional layout for the periodic table")
-    parser.add_argument("--variations", action="store_true",
-            help="display all variations, rather than just the best match.")
+
 
     args = parser.parse_args()
 
@@ -221,13 +233,30 @@ def main():
     periodic = PeriodicTable(**vars(args))
 
     if args.info:
-        periodic.render_info(args.info.capitalize())
+        symbol = args.info.lower().capitalize()
+
+        if symbol.isnumeric():
+            symbol = periodic.get_symbol_from_atomic_number(symbol)
+
+        try:
+            periodic.render_info(symbol)
+        except PeriodicTableError as exception:
+            print(exception)
+            exit(1)
 
     if args.phrase:
-        periodic.render_phrase(args.phrase)
+        try:
+            periodic.render_phrase(args.phrase)
+        except PeriodicTableError as exception:
+            print(exception)
+            exit(1)
 
     if args.word:
-        periodic.render_word(args.word)
+        try:
+            periodic.render_word(args.word)
+        except PeriodicTableError as exception:
+            print(exception)
+            exit(1)
 
     if args.table:
         periodic.render_table()
