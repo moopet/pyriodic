@@ -1,0 +1,1125 @@
+{
+  "H" : {
+    "number": 1,
+    "group": 1,
+    "period": 1,
+    "name": "Hydrogen",
+    "color": "green",
+    "series": "Other non metals"
+  },
+
+  "He": {
+    "number": 2,
+    "group": 18,
+    "period": 1,
+    "name": "Helium",
+    "color": "cyan",
+    "series": "Noble gases"
+  },
+
+  "Li": {
+    "number": 3,
+    "group": 1,
+    "period": 2,
+    "name": "Lithium",
+    "color": "red",
+    "series": "Alkali metals"
+  },
+
+  "Be": {
+    "number": 4,
+    "group": 2,
+    "period": 2,
+    "name": "Beryllium",
+    "color": "yellow",
+    "series": "Alkaline earth metals"
+  },
+
+  "B" : {
+    "number": 5,
+    "group": 13,
+    "period": 2,
+    "name": "Boron",
+    "color": "yellow",
+    "series": "Metalloids"
+  },
+
+  "C" : {
+    "number": 6,
+    "group": 18,
+    "period": 4,
+    "group": 14,
+    "period": 2,
+    "name": "Carbon",
+    "color": "green",
+    "series": "Other non metals"
+  },
+
+  "N" : {
+    "number": 7,
+    "group": 18,
+    "period": 4,
+    "group": 15,
+    "period": 2,
+    "name": "Nitrogen",
+    "color": "green",
+    "series": "Other non metals"
+  },
+
+  "O" : {
+    "number": 8,
+    "group": 18,
+    "period": 4,
+    "group": 16,
+    "period": 2,
+    "name": "Oxygen",
+    "color": "green",
+    "series": "Other non metals"
+  },
+
+  "F" : {
+    "number": 9,
+    "group": 18,
+    "period": 4,
+    "name": "Fluorine",
+    "group": 17,
+    "period": 2,
+    "color": "yellow",
+    "series": "halogens"
+  },
+
+  "Ne": {
+    "number": 10,
+    "group": 18,
+    "period": 4,
+    "group": 18,
+    "period": 2,
+    "name": "Neon",
+    "color": "cyan",
+    "series": "Noble gases"
+  },
+
+  "Na": {
+    "number": 11,
+    "group": 18,
+    "period": 4,
+    "group": 1,
+    "period": 3,
+    "name": "Sodium",
+    "color": "red",
+    "series": "Alkali metals"
+  },
+
+  "Mg": {
+    "number": 12,
+    "group": 18,
+    "period": 4,
+    "group": 2,
+    "period": 3,
+    "name": "Magnesium",
+    "color": "yellow",
+    "series": "Alkaline earth metals"
+  },
+
+  "Al": {
+    "number": 13,
+    "group": 18,
+    "period": 4,
+    "group": 13,
+    "period": 3,
+    "name": "Aluminium",
+    "color": "blue",
+    "series": "Other metals"
+  },
+
+  "Si": {
+    "number": 14,
+    "group": 18,
+    "period": 4,
+    "group": 14,
+    "period": 3,
+    "name": "Silicon",
+    "color": "yellow",
+    "series": "Metalloids"
+  },
+
+  "P" : {
+    "number": 15,
+    "group": 18,
+    "period": 4,
+    "group": 15,
+    "period": 3,
+    "name": "Phosphorus",
+    "color": "green",
+    "series": "Other non metals"
+  },
+
+  "S" : {
+    "number": 16,
+    "group": 18,
+    "period": 4,
+    "group": 16,
+    "period": 3,
+    "name": "Sulphur",
+    "color": "green",
+    "series": "Other non metals"
+  },
+
+  "Cl": {
+    "number": 17,
+    "group": 18,
+    "period": 4,
+    "group": 17,
+    "period": 3,
+    "name": "Chlorine",
+    "color": "yellow",
+    "series": "halogens"
+  },
+
+  "Ar": {
+    "number": 18,
+    "group": 18,
+    "period": 4,
+    "group": 18,
+    "period": 3,
+    "name": "Argon",
+    "color": "cyan",
+    "series": "Noble gases"
+  },
+
+  "K" : {
+    "number": 19,
+    "group": 18,
+    "period": 4,
+    "group": 1,
+    "period": 4,
+    "name": "Potassium",
+    "color": "red",
+    "series": "Alkali metals"
+  },
+
+  "Ca": {
+    "number": 20,
+    "group": 18,
+    "period": 4,
+    "group": 2,
+    "period": 4,
+    "name": "Calcium",
+    "color": "yellow",
+    "series": "Alkaline earth metals"
+  },
+
+  "Sc": {
+    "number": 21,
+    "group": 18,
+    "period": 4,
+    "group": 3,
+    "period": 4,
+    "name": "Scandium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Ti": {
+    "number": 22,
+    "group": 18,
+    "period": 4,
+    "group": 4,
+    "period": 4,
+    "name": "Titanium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "V" : {
+    "number": 23,
+    "group": 18,
+    "period": 4,
+    "group": 5,
+    "period": 4,
+    "name": "Vanadium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Cr": {
+    "number": 24,
+    "group": 18,
+    "period": 4,
+    "group": 6,
+    "period": 4,
+    "name": "Chromium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Mn": {
+    "number": 25,
+    "group": 18,
+    "period": 4,
+    "group": 7,
+    "period": 4,
+    "name": "Manganese",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Fe": {
+    "number": 26,
+    "group": 18,
+    "period": 4,
+    "group": 8,
+    "period": 4,
+    "name": "Iron",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Co": {
+    "number": 27,
+    "group": 18,
+    "period": 4,
+    "group": 9,
+    "period": 4,
+    "name": "Cobalt",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Ni": {
+    "number": 28,
+    "group": 18,
+    "period": 4,
+    "group": 10,
+    "period": 4,
+    "name": "Nickel",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Cu": {
+    "number": 29,
+    "group": 18,
+    "period": 4,
+    "group": 11,
+    "period": 4,
+    "name": "Copper",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Zn": {
+    "number": 30,
+    "group": 18,
+    "period": 4,
+    "group": 12,
+    "period": 4,
+    "name": "Zinc",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Ga": {
+    "number": 31,
+    "group": 18,
+    "period": 4,
+    "group": 13,
+    "period": 4,
+    "name": "Gallium",
+    "color": "blue",
+    "series": "Other metals"
+  },
+
+  "Ge": {
+    "number": 32,
+    "group": 18,
+    "period": 4,
+    "group": 14,
+    "period": 4,
+    "name": "Germanium",
+    "color": "yellow",
+    "series": "Metalloids"
+  },
+
+  "As": {
+    "number": 33,
+    "group": 18,
+    "period": 4,
+    "group": 15,
+    "period": 4,
+    "name": "Arsenic",
+    "color": "yellow",
+    "series": "Metalloids"
+  },
+
+  "Se": {
+    "number": 34,
+    "group": 18,
+    "period": 4,
+    "group": 16,
+    "period": 4,
+    "name": "Selenium",
+    "color": "green",
+    "series": "Other non metals"
+  },
+
+  "Br": {
+    "number": 35,
+    "group": 18,
+    "period": 4,
+    "group": 17,
+    "period": 4,
+    "name": "Bromine",
+    "color": "yellow",
+    "series": "halogens"
+  },
+
+  "Kr": {
+    "number": 36,
+    "group": 18,
+    "period": 4,
+    "group": 18,
+    "period": 4,
+    "name": "Krypton",
+    "color": "cyan",
+    "series": "Noble gases"
+  },
+
+  "Rb": {
+    "number": 37,
+    "group": 18,
+    "period": 4,
+    "name": "Rubidium",
+    "color": "red",
+    "series": "Alkali metals"
+  },
+
+  "Sr": {
+    "number": 38,
+    "group": 18,
+    "period": 4,
+    "name": "Strontium",
+    "color": "yellow",
+    "series": "Alkaline earth metals"
+  },
+
+  "Y" : {
+    "number": 39,
+    "group": 18,
+    "period": 4,
+    "name": "Yttrium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Zr": {
+    "number": 40,
+    "group": 18,
+    "period": 4,
+    "name": "Zirconium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Nb": {
+    "number": 41,
+    "group": 18,
+    "period": 4,
+    "name": "Niobium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Mo": {
+    "number": 42,
+    "group": 18,
+    "period": 4,
+    "name": "Molybdenum",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Tc": {
+    "number": 43,
+    "group": 18,
+    "period": 4,
+    "name": "Technetium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Ru": {
+    "number": 44,
+    "group": 18,
+    "period": 4,
+    "name": "Ruthenium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Rh": {
+    "number": 45,
+    "group": 18,
+    "period": 4,
+    "name": "Rhodium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Pd": {
+    "number": 46,
+    "group": 18,
+    "period": 4,
+    "name": "Palladium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Ag": {
+    "number": 47,
+    "group": 18,
+    "period": 4,
+    "name": "Silver",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Cd": {
+    "number": 48,
+    "group": 18,
+    "period": 4,
+    "name": "Cadmium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "In": {
+    "number": 49,
+    "group": 18,
+    "period": 4,
+    "name": "Indium",
+    "color": "blue",
+    "series": "Other metals"
+  },
+
+  "Sn": {
+    "number": 50,
+    "group": 18,
+    "period": 4,
+    "name": "Tin",
+    "color": "blue",
+    "series": "Other metals"
+  },
+
+  "Sb": {
+    "number": 51,
+    "group": 18,
+    "period": 4,
+    "name": "Antimony",
+    "color": "yellow",
+    "series": "Metalloids"
+  },
+
+  "Te": {
+    "number": 52,
+    "group": 18,
+    "period": 4,
+    "name": "Tellurium",
+    "color": "yellow",
+    "series": "Metalloids"
+  },
+
+  "I" : {
+    "number": 53,
+    "group": 18,
+    "period": 4,
+    "name": "Iodine",
+    "color": "yellow",
+    "series": "halogens"
+  },
+
+  "Xe": {
+    "number": 54,
+    "group": 18,
+    "period": 4,
+    "name": "Xenon",
+    "color": "cyan",
+    "series": "Noble gases"
+  },
+
+  "Cs": {
+    "number": 55,
+    "group": 18,
+    "period": 4,
+    "name": "Caesium",
+    "color": "red",
+    "series": "Alkali metals"
+  },
+
+  "Ba": {
+    "number": 56,
+    "group": 18,
+    "period": 4,
+    "name": "Barium",
+    "color": "yellow",
+    "series": "Alkaline earth metals"
+  },
+
+  "La": {
+    "number": 57,
+    "group": 18,
+    "period": 4,
+    "name": "Lanthanum",
+    "color": "yellow",
+    "series": "Lanthanides"
+  },
+
+  "Ce": {
+    "number": 58,
+    "group": 18,
+    "period": 4,
+    "name": "Cerium",
+    "color": "yellow",
+    "series": "Lanthanides"
+  },
+
+  "Pr": {
+    "number": 59,
+    "group": 18,
+    "period": 4,
+    "name": "Praseodymium",
+    "color": "yellow",
+    "series": "Lanthanides"
+  },
+
+  "Nd": {
+    "number": 60,
+    "group": 18,
+    "period": 4,
+    "name": "Neodymium",
+    "color": "yellow",
+    "series": "Lanthanides"
+  },
+
+  "Pm": {
+    "number": 61,
+    "group": 18,
+    "period": 4,
+    "name": "Promethium",
+    "color": "yellow",
+    "series": "Lanthanides"
+  },
+
+  "Sm": {
+    "number": 62,
+    "group": 18,
+    "period": 4,
+    "name": "Samarium",
+    "color": "yellow",
+    "series": "Lanthanides"
+  },
+
+  "Eu": {
+    "number": 63,
+    "group": 18,
+    "period": 4,
+    "name": "Europium",
+    "color": "yellow",
+    "series": "Lanthanides"
+  },
+
+  "Gd": {
+    "number": 64,
+    "group": 18,
+    "period": 4,
+    "name": "Gadolinium",
+    "color": "yellow",
+    "series": "Lanthanides"
+  },
+
+  "Tb": {
+    "number": 65,
+    "group": 18,
+    "period": 4,
+    "name": "Terbium",
+    "color": "yellow",
+    "series": "Lanthanides"
+  },
+
+  "Dy": {
+    "number": 66,
+    "group": 18,
+    "period": 4,
+    "name": "Dysprosium",
+    "color": "yellow",
+    "series": "Lanthanides"
+  },
+
+  "Ho": {
+    "number": 67,
+    "group": 18,
+    "period": 4,
+    "name": "Holmium",
+    "color": "yellow",
+    "series": "Lanthanides"
+  },
+
+  "Er": {
+    "number": 68,
+    "group": 18,
+    "period": 4,
+    "name": "Erbium",
+    "color": "yellow",
+    "series": "Lanthanides"
+  },
+
+  "Tm": {
+    "number": 69,
+    "group": 18,
+    "period": 4,
+    "name": "Thulium",
+    "color": "yellow",
+    "series": "Lanthanides"
+  },
+
+  "Yb": {
+    "number": 70,
+    "group": 18,
+    "period": 4,
+    "name": "Ytterbium",
+    "color": "yellow",
+    "series": "Lanthanides"
+  },
+
+  "Lu": {
+    "number": 71,
+    "group": 18,
+    "period": 4,
+    "name": "Lutetium",
+    "color": "yellow",
+    "series": "Lanthanides"
+  },
+
+  "Hf": {
+    "number": 72,
+    "group": 18,
+    "period": 4,
+    "name": "Hafnium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Ta": {
+    "number": 73,
+    "group": 18,
+    "period": 4,
+    "name": "Tantalum",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "W" : {
+    "number": 74,
+    "group": 18,
+    "period": 4,
+    "name": "Tungsten",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Re": {
+    "number": 75,
+    "group": 18,
+    "period": 4,
+    "name": "Rhenium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Os": {
+    "number": 76,
+    "group": 18,
+    "period": 4,
+    "name": "Osmium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Ir": {
+    "number": 77,
+    "group": 18,
+    "period": 4,
+    "name": "Iridium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Pt": {
+    "number": 78,
+    "group": 18,
+    "period": 4,
+    "name": "Planinum",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Au": {
+    "number": 79,
+    "group": 18,
+    "period": 4,
+    "name": "Gold",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Hg": {
+    "number": 80,
+    "group": 18,
+    "period": 4,
+    "name": "Mercury",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Tl": {
+    "number": 81,
+    "group": 18,
+    "period": 4,
+    "name": "Thallium",
+    "color": "blue",
+    "series": "Other metals"
+  },
+
+  "Pb": {
+    "number": 82,
+    "group": 18,
+    "period": 4,
+    "name": "Lead",
+    "color": "blue",
+    "series": "Other metals"
+  },
+
+  "Bi": {
+    "number": 83,
+    "group": 18,
+    "period": 4,
+    "name": "Bismuth",
+    "color": "blue",
+    "series": "Other metals"
+  },
+
+  "Po": {
+    "number": 84,
+    "group": 18,
+    "period": 4,
+    "name": "Polonium",
+    "color": "yellow",
+    "series": "Metalloids"
+  },
+
+  "At": {
+    "number": 85,
+    "group": 18,
+    "period": 4,
+    "name": "Astatine",
+    "color": "yellow",
+    "series": "halogens"
+  },
+
+  "Rn": {
+    "number": 86,
+    "group": 18,
+    "period": 4,
+    "name": "Radon",
+    "color": "cyan",
+    "series": "Noble gases"
+  },
+
+  "Fr": {
+    "number": 87,
+    "group": 18,
+    "period": 4,
+    "name": "Francium",
+    "color": "red",
+    "series": "Alkali metals"
+  },
+
+  "Ra": {
+    "number": 88,
+    "group": 18,
+    "period": 4,
+    "name": "Radium",
+    "color": "yellow",
+    "series": "Alkaline earth metals"
+  },
+
+  "Ac": {
+    "number": 89,
+    "group": 18,
+    "period": 4,
+    "name": "Actinium",
+    "color": "magenta",
+    "series": "Actinides"
+  },
+
+  "Th": {
+    "number": 90,
+    "group": 18,
+    "period": 4,
+    "name": "Thorium",
+    "color": "magenta",
+    "series": "Actinides"
+  },
+
+  "Pa": {
+    "number": 91,
+    "group": 18,
+    "period": 4,
+    "name": "ProtActinium",
+    "color": "magenta",
+    "series": "Actinides"
+  },
+
+  "U" : {
+    "number": 92,
+    "group": 18,
+    "period": 4,
+    "name": "Uranium",
+    "color": "magenta",
+    "series": "Actinides"
+  },
+
+  "Np": {
+    "number": 93,
+    "group": 18,
+    "period": 4,
+    "name": "Neptunium",
+    "color": "magenta",
+    "series": "Actinides"
+  },
+
+  "Pu": {
+    "number": 94,
+    "group": 18,
+    "period": 4,
+    "name": "Plutonium",
+    "color": "magenta",
+    "series": "Actinides"
+  },
+
+  "Am": {
+    "number": 95,
+    "group": 18,
+    "period": 4,
+    "name": "Americium",
+    "color": "magenta",
+    "series": "Actinides"
+  },
+
+  "Cm": {
+    "number": 96,
+    "group": 18,
+    "period": 4,
+    "name": "Curium",
+    "color": "magenta",
+    "series": "Actinides"
+  },
+
+  "Bk": {
+    "number": 97,
+    "group": 18,
+    "period": 4,
+    "name": "Berkelium",
+    "color": "magenta",
+    "series": "Actinides"
+  },
+
+  "Cf": {
+    "number": 98,
+    "group": 18,
+    "period": 4,
+    "name": "Californium",
+    "color": "magenta",
+    "series": "Actinides"
+  },
+
+  "Es": {
+    "number": 99,
+    "group": 18,
+    "period": 4,
+    "name": "Einsteinium",
+    "color": "magenta",
+    "series": "Actinides"
+  },
+
+  "Fm": {
+    "number": 100,
+    "group": 18,
+    "period": 4,
+    "name": "Fermium",
+    "color": "magenta",
+    "series": "Actinides"
+  },
+
+  "Md": {
+    "number": 101,
+    "group": 18,
+    "period": 4,
+    "name": "Mendelevium",
+    "color": "magenta",
+    "series": "Actinides"
+  },
+
+  "No": {
+    "number": 102,
+    "group": 18,
+    "period": 4,
+    "name": "Nobelium",
+    "color": "magenta",
+    "series": "Actinides"
+  },
+
+  "Lr": {
+    "number": 103,
+    "group": 18,
+    "period": 4,
+    "name": "Lawrencium",
+    "color": "magenta",
+    "series": "Actinides"
+  },
+
+  "Rf": {
+    "number": 104,
+    "group": 18,
+    "period": 4,
+    "name": "Rutherfordium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Db": {
+    "number": 105,
+    "group": 18,
+    "period": 4,
+    "name": "Dubnium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Sg": {
+    "number": 106,
+    "group": 18,
+    "period": 4,
+    "name": "Seaborgium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Bh": {
+    "number": 107,
+    "group": 18,
+    "period": 4,
+    "name": "Bohrium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Hs": {
+    "number": 108,
+    "group": 18,
+    "period": 4,
+    "name": "Hassium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Mt": {
+    "number": 109,
+    "group": 18,
+    "period": 4,
+    "name": "Meitnerium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Ds": {
+    "number": 110,
+    "group": 18,
+    "period": 4,
+    "name": "Darmstadtium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Rg": {
+    "number": 111,
+    "group": 18,
+    "period": 4,
+    "name": "Roentgenium",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Cn": {
+    "number": 112,
+    "group": 18,
+    "period": 4,
+    "name": "Copernicum",
+    "color": "magenta",
+    "series": "Transition elements"
+  },
+
+  "Nh": {
+    "number": 113,
+    "group": 18,
+    "period": 4,
+    "name": "Nihonium",
+    "color": "blue",
+    "series": "Other metals"
+  },
+
+  "Fl": {
+    "number": 114,
+    "group": 18,
+    "period": 4,
+    "name": "Flerovium",
+    "color": "blue",
+    "series": "Other metals"
+  },
+
+  "Mc": {
+    "number": 115,
+    "group": 18,
+    "period": 4,
+    "name": "Moscovium",
+    "color": "blue",
+    "series": "Other metals"
+  },
+
+  "Lv": {
+    "number": 116,
+    "group": 18,
+    "period": 4,
+    "name": "Livermorium",
+    "color": "blue",
+    "series": "Other metals"
+  },
+
+  "Ts": {
+    "number": 117,
+    "group": 18,
+    "period": 4,
+    "name": "Tennessine",
+    "color": "yellow",
+    "series": "Inner transition elements"
+  },
+
+  "Og": {
+    "number": 118,
+    "group": 18,
+    "period": 4,
+    "name": "Oganesson",
+    "color": "cyan",
+    "series": "Noble gases"
+  }
+}
