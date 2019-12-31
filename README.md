@@ -1,3 +1,3 @@
-# Periodic
+# Pyriodic
 
-Periodic table word thinger.
+Periodic table word thinger. In Python.
