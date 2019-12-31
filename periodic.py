@@ -1,5 +1,4 @@
-#/home/moopet/.pyenv/shims/python
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 import argparse
 import json
@@ -44,9 +43,6 @@ class PeriodicTable:
         if self.color:
             element_color = self.elements[symbol]["color"]
             contrast_color = "white"
-
-            if element_color == "green":
-                contrast_color = "grey_85"
 
             if element_color == "yellow":
                 contrast_color = "yellow_1"
