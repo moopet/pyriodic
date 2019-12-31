@@ -74,9 +74,8 @@ class PeriodicTable:
         """Print the classic periodic table using current output configuration."""
 
         if self.show_grid:
-            print("Periodic table of the elements")
+            print("    " + " ".join([str(group).ljust(3) for group in range(1, 19)]))
             print("")
-            print("   " + " ".join([str(group).ljust(3) for group in range(1, 19)]))
 
         period = 1
 
@@ -223,8 +222,6 @@ def main():
 
     args = parser.parse_args()
 
-    periodic = PeriodicTable(**vars(args))
-
     if args.grid and args.table and args.width < table_columns + grid_columns:
         print(f"Cannot display the table in less than {table_columns + grid_columns} columns.")
         exit(1)
@@ -232,6 +229,8 @@ def main():
     if args.table and args.width < table_columns:
         print(f"Cannot display the table in less than {table_columns} columns.")
         exit(1)
+
+    periodic = PeriodicTable(**vars(args))
 
     if args.info:
         periodic.render_info(args.info.capitalize())
