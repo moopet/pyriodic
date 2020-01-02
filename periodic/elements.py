@@ -1,5 +1,5 @@
-{
-  "H" : {
+elements = {
+  "H": {
     "number": 1,
     "group": 1,
     "period": 1,
@@ -39,7 +39,7 @@
     "series": "Alkaline earth metals"
   },
 
-  "B" : {
+  "B": {
     "number": 5,
     "group": 13,
     "period": 2,
@@ -49,7 +49,7 @@
     "series": "Metalloids"
   },
 
-  "C" : {
+  "C": {
     "number": 6,
     "group": 14,
     "period": 2,
@@ -59,7 +59,7 @@
     "series": "Other non metals"
   },
 
-  "N" : {
+  "N": {
     "number": 7,
     "group": 15,
     "period": 2,
@@ -69,7 +69,7 @@
     "series": "Other non metals"
   },
 
-  "O" : {
+  "O": {
     "number": 8,
     "group": 16,
     "period": 2,
@@ -79,7 +79,7 @@
     "series": "Other non metals"
   },
 
-  "F" : {
+  "F": {
     "number": 9,
     "name": "Fluorine",
     "origin": "Latin fluere, 'to flow'",
@@ -139,7 +139,7 @@
     "series": "Metalloids"
   },
 
-  "P" : {
+  "P": {
     "number": 15,
     "group": 15,
     "period": 3,
@@ -149,7 +149,7 @@
     "series": "Other non metals"
   },
 
-  "S" : {
+  "S": {
     "number": 16,
     "group": 16,
     "period": 3,
@@ -179,7 +179,7 @@
     "series": "Noble gases"
   },
 
-  "K" : {
+  "K": {
     "number": 19,
     "group": 1,
     "period": 4,
@@ -219,7 +219,7 @@
     "series": "Transition elements"
   },
 
-  "V" : {
+  "V": {
     "number": 23,
     "group": 5,
     "period": 4,
@@ -379,7 +379,7 @@
     "series": "Alkaline earth metals"
   },
 
-  "Y" : {
+  "Y": {
     "number": 39,
     "group": 3,
     "period": 5,
@@ -519,7 +519,7 @@
     "series": "Metalloids"
   },
 
-  "I" : {
+  "I": {
     "number": 53,
     "group": 17,
     "period": 5,
@@ -715,7 +715,7 @@
     "series": "Transition elements"
   },
 
-  "W" : {
+  "W": {
     "number": 74,
     "group": 6,
     "period": 6,
@@ -893,7 +893,7 @@
     "series": "Actinides"
   },
 
-  "U" : {
+  "U": {
     "number": 92,
     "period": 7,
     "name": "Uranium",
