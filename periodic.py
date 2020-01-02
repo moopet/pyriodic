@@ -17,7 +17,6 @@ class PeriodicTable:
         self.color = kwargs["color"] if "color" in kwargs else False
         self.width = kwargs["width"] if "width" in kwargs else None
         self.show_grid = kwargs["grid"] if "grid" in kwargs else False
-        self.show_variations = kwargs["variations"] if "variations" in kwargs else False
 
         with open('data/elements.json') as data_file:
             self.elements = json.load(data_file)
@@ -86,7 +85,7 @@ class PeriodicTable:
 
         if self.show_grid:
             print("    " + " ".join([str(group).ljust(3) for group in range(1, 19)]))
-            print("")
+            print()
 
         period = 1
 
@@ -104,7 +103,7 @@ class PeriodicTable:
                 line = f"{int(period) if period < 8 and is_top_line else ' '}  {line}"
 
             if line.strip()[:2] == "* ":
-                print("")
+                print()
 
             if self.color:
                 reset = attr('reset')
@@ -164,40 +163,6 @@ class PeriodicTable:
         return len(solution) + 100 * (len(solution) - len(set(solution)))
 
 
-    def render_word(self, word):
-        """Pretty-print a word in symbols."""
-
-        solutions = self.get_solutions(word)
-
-        if not solutions:
-            raise PeriodicTableError("No solution found for word")
-
-        if not self.show_variations:
-            solutions = solutions[:1]
-
-        for solution in solutions:
-            self.render_symbols(solution)
-
-
-    def render_phrase(self, text):
-        """Pretty-print a phrase in symbols."""
-
-        symbols = []
-
-        for word in text.split():
-            solutions = self.get_solutions(word)
-
-            if not solutions:
-                raise PeriodicTableError("No solution found for word")
-
-            if len(symbols):
-                symbols.append(" ")
-
-            symbols += solutions[0]
-
-        self.render_symbols(symbols)
-
-
     def get_symbol_from_atomic_number(self, number):
         """Translate an atomic number into an element's symbol."""
 
@@ -255,19 +220,37 @@ def main():
             print(exception)
             exit(1)
 
-    if args.phrase:
-        try:
-            periodic.render_phrase(args.phrase)
-        except PeriodicTableError as exception:
-            print(exception)
+    if args.word:
+        solutions = periodic.get_solutions(args.word)
+
+        if not solutions:
+            print(f"No solutions found for '{args.word}'.")
             exit(1)
 
-    if args.word:
-        try:
-            periodic.render_word(args.word)
-        except PeriodicTableError as exception:
-            print(exception)
-            exit(1)
+        if not args.variations:
+            solutions = solutions[:1]
+
+        for solution in solutions:
+            periodic.render_symbols(solution)
+
+
+    if args.phrase:
+        symbols = []
+
+        for word in args.phrase.split():
+            solutions = periodic.get_solutions(word)
+
+            if not solutions:
+                print(f"No solution found for .{word}'.")
+                exit(1)
+
+            if len(symbols):
+                symbols.append(" ")
+
+            symbols += solutions[0]
+
+        periodic.render_symbols(symbols)
+
 
     if args.table:
         periodic.render_table()
