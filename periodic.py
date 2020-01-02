@@ -4,6 +4,7 @@ import argparse
 import json
 from colored import fg, bg, attr
 
+
 class PeriodicTableError(Exception):
     """Periodic Table exceptions."""
 
@@ -16,7 +17,6 @@ class PeriodicTable:
     def __init__(self, **kwargs):
         self.color = kwargs["color"] if "color" in kwargs else False
         self.width = kwargs["width"] if "width" in kwargs else None
-        self.show_grid = kwargs["grid"] if "grid" in kwargs else False
 
         with open('data/elements.json') as data_file:
             self.elements = json.load(data_file)
@@ -24,8 +24,7 @@ class PeriodicTable:
         with open('data/layout.txt') as layout_file:
             self.layout = layout_file.read()
 
-
-    def get_colorized_symbol(self, symbol, show_number=False):
+    def colorize_symbol(self, symbol, show_number=False):
         """Get a pretty version of a symbol or number."""
 
         if symbol == " ":
@@ -79,12 +78,13 @@ class PeriodicTable:
         if "group" in element:
             print(f"Group: {element['group']}")
 
+    def render_table(self, show_grid=False):
+        """Print the classic periodic table using current output
+        configuration."""
 
-    def render_table(self):
-        """Print the classic periodic table using current output configuration."""
-
-        if self.show_grid:
-            print("    " + " ".join([str(group).ljust(3) for group in range(1, 19)]))
+        if show_grid:
+            headers = [str(group).ljust(3) for group in range(1, 19)]
+            print("    " + " ".join(headers))
             print()
 
         period = 1
@@ -95,12 +95,13 @@ class PeriodicTable:
             period += 0.5
 
             for symbol in self.elements:
-                replacement = self.get_colorized_symbol(symbol, is_top_line)
+                replacement = self.colorize_symbol(symbol, is_top_line)
 
                 line = line.replace(f" {symbol:2} ", replacement)
 
-            if self.show_grid:
-                line = f"{int(period) if period < 8 and is_top_line else ' '}  {line}"
+            if show_grid:
+                header = int(period) if period < 8 and is_top_line else ' '
+                line = f"{header}  {line}"
 
             if line.strip()[:2] == "* ":
                 print()
@@ -109,11 +110,11 @@ class PeriodicTable:
                 reset = attr('reset')
 
                 for symbol in self.elements:
-                    color = self.elements[symbol]["color"]
-                    line = line.replace(f" {symbol:2} ", f"{bg(color)} {symbol:2} {reset}")
+                    color = bg(self.elements[symbol]["color"])
+                    pattern = f" {symbol:2} "
+                    line = line.replace(pattern, f"{color}{pattern}{reset}")
 
             print(line)
-
 
     def render_symbols(self, symbols):
         """Print a list of symbols using current output configuration."""
@@ -122,12 +123,11 @@ class PeriodicTable:
         lines = [symbols[i:i + columns] for i in range(0, len(symbols), columns)]
 
         for line in lines:
-            top = [self.get_colorized_symbol(symbol, show_number=True) for symbol in line]
-            bottom = [self.get_colorized_symbol(symbol) for symbol in line]
+            top = [self.colorize_symbol(symbol, show_number=True) for symbol in line]
+            bottom = [self.colorize_symbol(symbol) for symbol in line]
 
             print("".join(top))
             print("".join(bottom))
-
 
     def get_solutions(self, word, recursing=False):
         """Find all permutations that can spell a word."""
@@ -156,18 +156,17 @@ class PeriodicTable:
 
         return sorted(self.results, key=self.get_solution_ranking)
 
-
     def get_solution_ranking(self, solution):
         """Score a solution based on length and number of repeated symbols."""
 
         return len(solution) + 100 * (len(solution) - len(set(solution)))
 
-
     def get_symbol_from_atomic_number(self, number):
         """Translate an atomic number into an element's symbol."""
 
         number = int(number)
-        matches = [e for e in self.elements if self.elements[e]["number"] == number]
+        elements = self.elements
+        matches = [e for e in elements if elements[e]["number"] == number]
 
         return matches[0] if matches else None
 
@@ -181,29 +180,41 @@ def main():
     parser = argparse.ArgumentParser(description=main.__doc__)
 
     group = parser.add_mutually_exclusive_group()
-    parser.add_argument("-i", "--info", type=str,
-            help="show more info about a particular element", metavar=("ELEMENT"))
+    parser.add_argument(
+        "-i", "--info", type=str,
+        help="show more info about a particular element", metavar=("ELEMENT")
+    )
     parser.add_argument("-w", "--word", type=str, help="a word to render")
-    group.add_argument("-v", "--variations", action="store_true",
-            help="display all variations, rather than just the best match.")
+    group.add_argument(
+        "-v", "--variations", action="store_true",
+        help="display all variations, rather than just the best match."
+    )
     group.add_argument("-p", "--phrase", type=str, help="a phrase to render")
-    parser.add_argument("-g", "--grid", action="store_true", help="show the grid")
-    parser.add_argument("-t", "--table", action="store_true",
-            help="display the traditional layout for the periodic table")
-    parser.add_argument("-c", "--color", action="store_true",
-            help="display each element using its color")
-    parser.add_argument("--width", type=int, default=80,
-            help="number of character columns to display on one line")
-
+    parser.add_argument(
+        "-g", "--grid", action="store_true",
+        help="show the grid"
+    )
+    parser.add_argument(
+        "-t", "--table", action="store_true",
+        help="display the traditional layout for the periodic table"
+    )
+    parser.add_argument(
+        "-c", "--color", action="store_true",
+        help="display each element using its color"
+    )
+    parser.add_argument(
+        "--width", type=int, default=80,
+        help="number of character columns to display on one line"
+    )
 
     args = parser.parse_args()
 
     if args.grid and args.table and args.width < table_columns + grid_columns:
-        print(f"Cannot display the table in less than {table_columns + grid_columns} columns.")
+        print(f"Terminal width must be > {table_columns + grid_columns}.")
         exit(1)
 
     if args.table and args.width < table_columns:
-        print(f"Cannot display the table in less than {table_columns} columns.")
+        print(f"Terminal width must be > {table_columns}.")
         exit(1)
 
     periodic = PeriodicTable(**vars(args))
@@ -233,7 +244,6 @@ def main():
         for solution in solutions:
             periodic.render_symbols(solution)
 
-
     if args.phrase:
         symbols = []
 
@@ -251,9 +261,8 @@ def main():
 
         periodic.render_symbols(symbols)
 
-
     if args.table:
-        periodic.render_table()
+        periodic.render_table(show_grid=args.grid)
 
 
 if __name__ == "__main__":
