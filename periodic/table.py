@@ -99,9 +99,6 @@ class PeriodicTable:
                 header = int(period) if period < 8 and is_top_line else ' '
                 line = f"{header}  {line}"
 
-            if line.strip()[:2] == "* ":
-                print()
-
             if self.color:
                 reset = attr('reset')
 
