@@ -12,6 +12,12 @@ about a specific element.
 * Render a word or phrase using element symbols
 * Provide alternate solutions for rendering a word using only element symbols
 
+## Flashy screenies
+
+![The periodic table of the elements](/images/table-cg.png)
+
+![The words "chocolate", "bacon" and "counterespionage" rendered in colourful element symbols](/images/chocolate-bacon-counterespionage.png)
+
 ## Dependencies
 
 * colored
