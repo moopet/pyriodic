@@ -91,7 +91,7 @@ def main():
             solutions = periodic.get_solutions(word)
 
             if not solutions:
-                print(f"No solution found for .{word}'.")
+                print(f"No solution found for '{word}'.")
                 exit(1)
 
             if len(symbols):
